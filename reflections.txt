@@ -1,0 +1,7 @@
+The P component was used to turn the vehicle in the direction it needed to go to return to the center of the road.
+
+The D component was used to limit how quickly the vehile approched the center of the road so it would not oscillate or overshoot.
+
+The I component was used to help give an extra turning boost while in turns which created prologend periods of being outside of the center of the lane.
+
+I manually tuned the parameter based on if I though the car was ossilating too much, increase Kd. If the car was having too much of a constant offset increase Ki
