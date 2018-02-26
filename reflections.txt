@@ -1,7 +1,7 @@
-The P component was used to turn the vehicle in the direction it needed to go to return to the center of the road.
+The P component was used to turn the vehicle in the direction it needed to go to return to the center of the road. The agressiveness was proportional to the cross track error. Thus p for the proportional term.
 
-The D component was used to limit how quickly the vehile approched the center of the road so it would not oscillate or overshoot.
+The D component was used to limit how quickly the vehile approched the center of the road so it would not oscillate or overshoot. The d term was for the derivitive component and was multiplied by the rate at which the vehicle was approaching the desired line and counter acted a protion of the p component. This prevents the vehicle from approaching the line too quickly and over shooting.
 
-The I component was used to help give an extra turning boost while in turns which created prologend periods of being outside of the center of the lane.
+The I component was helps with turns and any unexpected allignment issues. The I term is multipied by the running total of cross track error. The longer an error perssisists the greater the I component becomes until the error is reduced to 0.
 
-I manually tuned the parameter based on if I though the car was ossilating too much, increase Kd. If the car was having too much of a constant offset increase Ki
+I manually tuned the parameter based on if I thought the car was ossilating too much, increase Kd. If the car was having too much of a constant offset increase Ki
